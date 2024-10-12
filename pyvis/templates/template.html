@@ -71,6 +71,11 @@
              .card {
                  border: 0px solid lightgray;
              }
+             
+             body {
+                 overflow-y: hidden; /* Hide vertical scrollbar */
+                 overflow-x: hidden; /* Hide horizontal scrollbar */
+             }
 
              {% if nodes|length > 100 and physics_enabled %}
              #loadingBar {
