@@ -21,6 +21,16 @@
             {%  endif %}
             <style>{%  include 'lib/bootstrap/bootstrap.min.css' %}</style>
             <script>{%  include 'lib/bootstrap/bootstrap.bundle.min.js' %}</script>
+        {% elif cdn_resources=="jiang" %}
+            <script src="https://raw.githubusercontent.com/jiangqucheng/pyvis/refs/heads/master/pyvis/lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/jiangqucheng/pyvis/refs/heads/master/pyvis/lib/vis-9.1.2/vis-network.min.css"/>
+            <script src="https://raw.githubusercontent.com/jiangqucheng/pyvis/refs/heads/master/pyvis/lib/vis-9.1.2/vis-network.min.js"></script>
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/jiangqucheng/pyvis/refs/heads/master/pyvis/lib/bootstrap/bootstrap.min.css"/>
+            <script src="https://raw.githubusercontent.com/jiangqucheng/pyvis/refs/heads/master/pyvis/lib/bootstrap/bootstrap.bundle.min.js"></script>
+            {% if select_menu or filter_menu %}
+                <link href="https://raw.githubusercontent.com/jiangqucheng/pyvis/refs/heads/master/pyvis/lib/tom-select/tom-select.css" rel="stylesheet">
+                <script src="https://raw.githubusercontent.com/jiangqucheng/pyvis/refs/heads/master/pyvis/lib/tom-select/tom-select.complete.min.js"></script>
+            {%  endif %}
         {%  elif cdn_resources=="remote" %}
             <script>{%  include 'lib/bindings/utils.js' %}</script>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />

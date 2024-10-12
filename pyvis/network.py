@@ -88,7 +88,7 @@ class Network(object):
         self.neighborhood_highlight = neighborhood_highlight
         self.select_menu = select_menu
         self.filter_menu = filter_menu
-        assert cdn_resources in ["local", "in_line", "remote"], "cdn_resources not in [local, in_line, remote]."
+        assert cdn_resources in ["local", "in_line", "remote", "jiang"], "cdn_resources not in [local, in_line, remote]."
         # path is the root template located in the template_dir
         self.path = "template.html"
         self.template_dir = os.path.dirname(__file__) + "/templates/"
@@ -527,7 +527,7 @@ class Network(object):
                 shutil.copytree(f"{os.path.dirname(__file__)}/templates/lib/bootstrap", "lib/bootstrap")
             with open(getcwd_name, "w+") as out:
                 out.write(self.html)
-        elif self.cdn_resources == "in_line" or self.cdn_resources == "remote":
+        elif self.cdn_resources == "in_line" or self.cdn_resources == "remote" or self.cdn_resources == "jiang":
             with open(getcwd_name, "w+") as out:
                 out.write(self.html)
         else:
